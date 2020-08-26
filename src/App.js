@@ -5,6 +5,7 @@ import './App.css';
 
 import Home from './Components/Home.js';
 import About from './Components/About.js';
+import Post from './Components/Post.js';
 import Posts from './Components/Posts.js';
 import PostLists from './Components/PostLists.js';
 
@@ -33,6 +34,7 @@ function App() {
          
         <Route path="posts" element={<Posts />} >  {/*  Nested routes */}
           <Route path="/" element={<PostLists />} />
+          <Route path=":slug" element={<Post />} />  {/*  this is a dynamic route */}
         </Route>
       </Routes>
 
